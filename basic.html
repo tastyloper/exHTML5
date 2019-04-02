@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- 문서형 정의 5부터는 표준모드로 랜더링만 시킴, 버전을 쓰지않음, 최신 버전으로 랜더링 한다라는 의미 -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS의 기초</title>
+  <style>
+    /* 상속 */
+    .wrapper {
+      font-size: 2em; /* 상속받은 글자크기 곱하기 숫자 배, 여기서는 2배 */
+      border: 2px solid #000;
+      background: yellow;
+    }
+    #box {
+      color: blue;
+    }
+    html div.wrapper div.box1.note {
+      color: purple;
+    }
+    body div.wrapper div.note {
+      color: red;
+    }
+    [class^="box"] {
+      color: green !important;
+      background: pink;
+    }
+    .box2 {
+      display: inline-block;
+      width: 300px;
+      height: 100px;
+      padding: 50px;
+      background: orange;
+      border: 1px solid blue;
+    }
+    .box3 {
+      display: inline;
+    }
+    .test {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      background: yellow;
+      border: 2px solid #000;
+    }
+    .test div {
+      margin: 20px 0;
+      background: lime;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box1 note" id="box">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+  </div>
+  <div class="test">
+    <div class="test1">박스1</div>
+    <div class="test2">박스2</div>
+    <div class="test3">박스3</div>
+    <div class="test4">박스4</div>
+  </div>
+</body>
+</html>
