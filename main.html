@@ -8,7 +8,7 @@
 <body>
   <div class="container">
     <header class="header">
-      <h1 class="logo"><a href="#"><img src="images/logo.png" alt="Web Cafe"></a></h1>
+      <h1 class="logo"><a href="#"><img src="images/logo.png" alt="WebCafe" title="웹카페"></a></h1>
       <ul class="member">
         <li><a href="#">홈</a></li>
         <li><a href="#">로그인</a></li>
@@ -21,63 +21,92 @@
         <ul class="menu">
           <li class="menu-item menu-act" tabindex="0">
             <span class="menu-item-text">HTML에 대해</span>
-            <ul class="sub-menu">
-              <li><a href="#">HTML5 소개</a></li>
-              <li><a href="#">레퍼런스 소개</a></li>
-              <li><a href="#">활용예제</a></li>
+            <ul class="sub-menu sub-menu1">
+              <li><a href="#" class="icon-dot-circled">HTML5 소개</a></li>
+              <li><a href="#" class="icon-dot-circled">레퍼런스 소개</a></li>
+              <li><a href="#" class="icon-dot-circled">활용예제</a></li>
             </ul>
           </li>
           <li class="menu-item" tabindex="0">
             <span class="menu-item-text">CSS에 대해</span>
-            <ul class="sub-menu">
-              <li><a href="#">CSS 소개</a></li>
-              <li><a href="#">CSS2 VS CSS3</a></li>
-              <li><a href="#">CSS 애니메이션</a></li>
-              <li><a href="#">CSS Framework</a></li>
+            <ul class="sub-menu sub-menu2">
+              <li><a href="#" class="icon-dot-circled">CSS 소개</a></li>
+              <li><a href="#" class="icon-dot-circled">CSS2 VS CSS3</a></li>
+              <li><a href="#" class="icon-dot-circled">CSS 애니메이션</a></li>
+              <li><a href="#" class="icon-dot-circled">CSS Framework</a></li>
             </ul>
           </li>
           <li class="menu-item" tabindex="0">
             <span class="menu-item-text">웹 표준</span>
-            <ul class="sub-menu">
-              <li><a href="#">웹 표준 이란?</a></li>
-              <li><a href="#">W3C</a></li>
-              <li><a href="#">HTML5의 현재와 미래</a></li>
+            <ul class="sub-menu sub-menu3">
+              <li><a href="#" class="icon-dot-circled">웹 표준 이란?</a></li>
+              <li><a href="#" class="icon-dot-circled">W3C</a></li>
+              <li><a href="#" class="icon-dot-circled">HTML5의 현재와 미래</a></li>
             </ul>
           </li>
           <li class="menu-item" tabindex="0">
             <span class="menu-item-text">웹 접근성</span>
-            <ul class="sub-menu">
-              <li><a href="#">웹 접근성의 개요</a></li>
-              <li><a href="#">장애 환경의 이해</a></li>
-              <li><a href="#">장차법</a></li>
-              <li><a href="#">웹 접근성 품질마크</a></li>
+            <ul class="sub-menu sub-menu4">
+              <li><a href="#" class="icon-dot-circled">웹 접근성의 개요</a></li>
+              <li><a href="#" class="icon-dot-circled">장애 환경의 이해</a></li>
+              <li><a href="#" class="icon-dot-circled">장차법</a></li>
+              <li><a href="#" class="icon-dot-circled">웹 접근성 품질마크</a></li>
             </ul>
           </li>
           <li class="menu-item" tabindex="0">
             <span class="menu-item-text">묻고 답하기</span>
-            <ul class="sub-menu">
-              <li><a href="#">묻고 답하기</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">1대1 질문</a></li>
-              <li><a href="#">웹표준</a></li>
-              <li><a href="#">웹 접근성</a></li>
+            <ul class="sub-menu sub-menu5">
+              <li><a href="#" class="icon-dot-circled">묻고 답하기</a></li>
+              <li><a href="#" class="icon-dot-circled">FAQ</a></li>
+              <li><a href="#" class="icon-dot-circled">1대1 질문</a></li>
+              <li><a href="#" class="icon-dot-circled">웹표준</a></li>
+              <li><a href="#" class="icon-dot-circled">웹 접근성</a></li>
             </ul>
           </li>
           <li class="menu-item" tabindex="0">
             <span class="menu-item-text">자료실</span>
-            <ul class="sub-menu">
-              <li><a href="#">공개 자료실</a></li>
-              <li><a href="#">이미지 자료실</a></li>
-              <li><a href="#">웹표준 자료실</a></li>
-              <li><a href="#">웹 접근성 자료실</a></li>
+            <ul class="sub-menu sub-menu6">
+              <li><a href="#" class="icon-dot-circled">공개 자료실</a></li>
+              <li><a href="#" class="icon-dot-circled">이미지 자료실</a></li>
+              <li><a href="#" class="icon-dot-circled">웹표준 자료실</a></li>
+              <li><a href="#" class="icon-dot-circled">웹 접근성 자료실</a></li>
             </ul>
           </li>
         </ul>
       </nav>
     </header>
-    <div class="visual">비주얼</div>
+    <div class="visual">
+      <p class="visual-text">Web Standards &amp; Aceessibility</p>
+    </div>
     <main class="main clearfix">
-      <div class="group group1">그룹1</div>
+      <div class="group group1">
+        <section class="login">
+          <h2 class="login-heading">로그인</h2>
+          <form action="https://formspree.io/tastyloper@gmail.com" class="login-form" method="POST">
+            <fieldset>
+              <legend>회원 로그인 폼</legend>
+              <div class="user-email">
+                <label for="user-email">아이디</label><input type="email" name="uid" id="user-email" required placeholder="이메일 주소">
+              </div>
+              <div class="user-pw">
+                <label for="user-pw">비밀번호</label><input type="password" name="upw" id="user-pw" required placeholder="8자리 이상">
+              </div>
+              <button type="submit" class="btn-login">로그인</button>
+            </fieldset>
+          </form>
+          <ul class="sign">
+            <li class="icon-right-open"><a href="#">회원가입</a></li>
+            <li class="icon-right-open"><a href="#">아이디/비밀번호 찾기</a></li>
+          </ul>
+        </section>
+        <section class="validation">
+          <h2 class="readable-hidden">유효성 검사 배너</h2>
+          <ul class="validation-list">
+            <li><a href="https://validator.w3.org/" target="_blank" title="마크업 유효성 검사 배너 링크(새창)">W3C Markup Validation</a></li>
+            <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank" title="CSS 유효성 검사 배너 링크(새창)">CSS Validation Service</a></li>
+          </ul>
+        </section>
+      </div>
       <div class="group group2">그룹2</div>
       <div class="group group3">그룹3</div>
     </main>

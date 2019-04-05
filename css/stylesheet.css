@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
-@import url("./normalize.css");
+@import url("fontello.css");
+@import url("normalize.css");
 
 /* reset */
 html, body, div, span, applet, object, iframe,
@@ -24,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+main, article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -55,7 +56,7 @@ body {
   font-size: 1.4rem;
   font-family: "Spoqa Han Sans", sans-serif;
   font-weight: 400;
-  background: #FFF;
+  background: url("images/bg_flower.png") no-repeat 50% 0, #AAA linear-gradient(#AAA 0%, #CCC 40%, #EEE 70%, #FFF 100%);
 }
 /* 링크 스타일 */
 a {
@@ -63,7 +64,7 @@ a {
   text-decoration: none;
 }
 /* 숨김 콘텐츠 */
-.readable-hidden {
+.readable-hidden, legend {
   overflow: hidden;
   position: absolute;
   width: 1px;
@@ -77,9 +78,6 @@ a {
   display: block;
   clear: both;
 }
-.container {
-  background: silver;
-}
 .header, .visual, .main, .slogan, .footer {
   width: 940px;
   margin: 0 auto;
@@ -87,14 +85,16 @@ a {
 /* 헤더 */
 .header {
   position: relative;
-  padding: 0 30px;
+  padding: 0 30px 38px;
   background: #FFF;
+  border-radius: 0 0 15px 15px;
 }
 /* 로고 */
 .logo {
   position: absolute;
   top: 50px;
   left: 65px;
+  z-index: 10;
 }
 /* 멤버 링크 */
 .member {
@@ -113,38 +113,230 @@ a {
   padding: 8px 7px 7px 10px;
   text-transform: uppercase;
 }
-.visual {
-  height: 120px;
-  background: orange;
+/* 메인 메뉴 */
+.menu {
+  height: 47px;
+  margin-top: 5px;
+  padding-left: 225px;  
+  background: linear-gradient(to bottom, #E8852E 0%,#ED552F 35%,#ED552F 70%,#E8852E 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
 }
+.menu-item {
+  float: left;
+  position: relative;
+}
+.menu-item-text {
+  display: block;
+  padding: 0 20px;
+  color: #FFF;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 45px;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+.menu-act .menu-item-text {
+  color: #FF0 !important;
+}
+.menu-act .menu-item-text::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #000;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 47px;
+  white-space: nowrap;
+}
+.menu-act .sub-menu {
+  display: block !important;
+}
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+  left: 0;
+}
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
+  right: 0;
+}
+.sub-menu li,
+.sub-menu a {
+  display: inline-block;
+}
+.sub-menu a {
+  margin-right: 10px;
+  padding: 8px 0;
+}
+/* 비주얼 */
+.visual {
+  position: relative;
+  height: 120px;
+}
+/* 배경 애니메이션 */
+@keyframes flowerAni {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.visual::before,
+.visual::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  animation: flowerAni 2s infinite alternate; /*duration은 필수라 먼저 나오는 값이 duration*/
+  /* animation-name: flowerAni; 위에랑 같은 것
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+}
+.visual::before {
+  background-image: url("images/ani_flower_01.png"), url("images/ani_flower_02.png");
+  background-position: 0 -10px, 670px 0;
+}
+.visual::after {
+  background-image: url("images/ani_flower_03.png"), url("images/ani_flower_04.png");
+  background-position: 300px 0, 800px 0;
+  animation-delay: 1s;
+}
+/* 텍스트 애니메이션 */
+@keyframes textAni {
+  0% {
+    color: rgba(0, 0, 0, 0);
+    font-size: 12px;
+    transform : translate(0, 0);
+  }
+  100% {
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    transform : translate(400px, 75px);
+  }
+}
+.visual-text {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation-name: textAni;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+/* 메인 콘텐츠 */
 .main {
   /* display: flex;
   justify-content: space-between;
   height: 60vh; */
+  min-height: 450px;
   padding: 30px 15px;
-  background: lime;
+  background: #FFF;
+  border-radius: 15px 15px 0 0;
 }
 .group {
   float: left;
-  height: 30vh;
   margin: 0 15px;
 }
 .group1 {
   width: 250px;
-  background: skyblue;
 }
 .group2 {
   width: 380px;
-  background: pink;
 }
 .group3 {
   width: 190px;
-  background: teal;
 }
+/* 로그인 */
+.login {
+  padding: 10px;
+  background-image: radial-gradient(circle at top right, #E8852E, #ED552F);
+  border-radius: 5px;
+  box-shadow: 5px 5px #AAA;
+}
+.login-heading {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  color: #FF0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.login-form {
+  position: relative;
+  padding: 10px 10px 0;
+  background-color: #FFF;
+  border-radius: 5px 5px 0 0;
+}
+.login-form fieldset {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #CCC;
+}
+.login-form fieldset > div {
+  float: left;
+  width: 155px;
+  margin-bottom: 6px;
+}
+.login-form input {
+  float: right;
+  width: 95px;
+  height: 22px;
+  padding: 1px 5px;
+}
+.btn-login {
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  padding: 0;
+  color: #FFF;
+  font-size: 1.2rem;
+  background-color: #ED552F;
+  border: 1px solid #E8852E;
+  border-radius: 3px;
+}
+.sign {
+  padding: 8px 10px;
+  background-color: #FFF;
+  border-radius: 0 0 5px 5px;
+}
+.sign li {
+  display: inline;
+  letter-spacing: -1.5px;
+}
+.sign li:last-child {
+  float: right;
+}
+.sign li.icon-right-open:before {
+  color: #ED552F;
+}
+.validation {
+  margin-top: 25px;
+}
+.validation a {
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  line-height: 30px;
+  background: url("images/validation_icon.png") 15px 50% no-repeat, #CCC linear-gradient(#CCC, #EEE);
+  border: 1px solid #AAA;
+  border-radius: 15px;
+}
+.validation a:focus,
+.validation a:hover {
+  color: #F00;
+}
+/* 슬로건 */
 .slogan {
   height: 10vh;
   background: tomato;
 }
+/* 푸터 */
 .footer-bg {
   background: purple;
 }
