@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8"> <!-- 인코딩에 순서는 제목 보다 먼저 선언해야한다 -->
   <title>웹카페(Web Cafe)</title>
+  <link rel="shortcut icon" href="images/common/webcafe.ico" type="image/x-icon">
+  <link rel="icon" href="images/common/webcafe.png" type="image/png">
   <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
@@ -106,8 +108,37 @@
             <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank" title="CSS 유효성 검사 배너 링크(새창)">CSS Validation Service</a></li>
           </ul>
         </section>
+        <section class="term">
+          <h2 class="term-heading">웹 관련 용어</h2>
+          <dl class="term-list">
+            <div class="clearfix">
+              <dt class="term-list-subject"><a href="#">웹 표준 이란?</a></dt>
+              <dd class="term-list-thumbnail"><img src="images/web_standards.gif" alt="W3C 로고"></dd>
+              <dd class="term-list-brief">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
+            </div>
+            <div class="even clearfix">
+              <dt class="term-list-subject"><a href="#">웹 표준 이란?</a></dt>
+              <dd class="term-list-thumbnail"><img src="images/web_standards.gif" alt="W3C 로고"></dd>
+              <dd class="term-list-brief">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
+            </div>
+          </dl>
+        </section>
       </div>
-      <div class="group group2">그룹2</div>
+      <div class="group group2">
+        <section class="search">
+          <h2 class="readable-hidden">검색</h2>
+          <form action="https://formspree.io/tastyloper@gmail.com" class="search-form" method="POST">
+            <fieldset>
+              <legend>검색 폼</legend>
+              <div class="search-container">
+                <label class="icon-search" for="search">자료 검색</label>
+                <input type="search" name="search" id="search" required placeholder="검색어를 입력하세요.">
+                <button type="submit" class="btn-search">검색</button>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </div>
       <div class="group group3">그룹3</div>
     </main>
     <article class="slogan">슬로건</article>
