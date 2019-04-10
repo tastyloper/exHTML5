@@ -125,6 +125,7 @@ a {
 .menu-item {
   float: left;
   position: relative;
+  cursor: default;
 }
 .menu-item-text {
   display: block;
@@ -396,7 +397,190 @@ a {
   border: 1px solid #AAA;
   border-radius: 3px;
 }
-
+/* 공지사항 및 자료실 */
+.board {
+  position: relative;
+  margin-top: 20px;
+  padding-top: 40px;
+}
+.board .tab {
+  position: absolute;
+  top: 0;
+  padding: 5px 10px;
+  color: #666;
+  background: #CCC linear-gradient(#CCC, #EEE);
+  border: 1px solid #AAA;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  user-select: none;
+}
+.board .notice-heading {
+  left: 0;
+}
+.board .pds-heading {
+  left: 73px;
+}
+.board .board-act .tab {
+  color: #ED552F;
+  background: #FFF;
+  border-bottom: 0;
+  border-color: #ED552F;
+}
+.board .board-list {
+  display: none;
+  min-height: 140px;
+}
+.board .board-act .board-list {
+  display: block;
+}
+.board .board-list li {
+  margin-top: 5px;
+}
+.board .board-list li.icon-dot-circled:before {
+  vertical-align: text-top;
+}
+.board .board-list a {
+  overflow: hidden;
+  display: inline-block;
+  width: 280px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.board .board-list time {
+  float: right;
+}
+.board .board-more {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.board .board-act .board-more {
+  display: block;
+}
+.board .board-more.icon-plus::before {
+  color: #337326;
+}
+.board2 {
+  position: relative;
+  margin-top: 20px;
+  padding-top: 40px;
+}
+.board2 .tab {
+  position: absolute;
+  top: 0;
+  padding: 5px 10px;
+  color: #666;
+  background: #CCC linear-gradient(#CCC, #EEE);
+  border: 1px solid #AAA;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  user-select: none;
+}
+.board2 .notice .tab {
+  left: 0;
+}
+.board2 .pds .tab {
+  left: 73px;
+}
+.board2 .board-act .tab {
+  color: #ED552F;
+  background: #FFF;
+  border-bottom: 0;
+  border-color: #ED552F;
+}
+.board2 .board-list {
+  display: none;
+  min-height: 140px;
+}
+.board2 .board-act .board-list {
+  display: block;
+}
+.board2 .board-list li {
+  margin-top: 5px;
+}
+.board2 .board-list li.icon-dot-circled:before {
+  vertical-align: text-top;
+}
+.board2 .board-list a {
+  overflow: hidden;
+  display: inline-block;
+  width: 280px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.board2 .board-list time {
+  float: right;
+}
+.board2 .board-more {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.board2 .board-act .board-more {
+  display: block;
+}
+.board2 .board-more.icon-plus::before {
+  color: #337326;
+}
+.board3 {
+  position: relative;
+  margin-top: 20px;
+}
+.board3 .tab-menu li {
+  float: left;
+}
+.board3 .board-tab {
+  display: block;
+  padding: 5px 10px;
+  color: #666;
+  background: #CCC linear-gradient(#CCC, #EEE);
+  border: 1px solid #AAA;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  user-select: none;
+}
+.board3 .board-tab.board-act {
+  color: #ED552F;
+  background: #FFF;
+  border-bottom: 0;
+  border-color: #ED552F;
+}
+.board3 .tabpanel {
+  display: none;
+  margin-top: 15px;
+}
+.board3 .tabpanel.tabpanel-act {
+  display: block;
+}
+.board3 .board-list {
+  min-height: 140px;
+}
+.board3 .board-list li {
+  margin-top: 5px;
+}
+.board3 .board-list li.icon-dot-circled:before {
+  vertical-align: text-top;
+}
+.board3 .board-list a {
+  overflow: hidden;
+  display: inline-block;
+  width: 280px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.board3 .board-list time {
+  float: right;
+}
+.board3 .board-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.board3 .board-more.icon-plus::before {
+  color: #337326;
+}
 /* 슬로건 */
 .slogan {
   height: 10vh;
