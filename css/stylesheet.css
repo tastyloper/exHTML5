@@ -581,6 +581,131 @@ a {
 .board3 .board-more.icon-plus::before {
   color: #337326;
 }
+/* 뉴스 */
+.news {
+  position: relative;
+  margin-top: 20px;
+}
+.news-heading {
+  position: relative;
+  padding-bottom: 15px;
+  color: #ED552F;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.news-heading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 304px;
+  height: 1px;
+  background: #ABABAB linear-gradient(to right, #ABABAB, #EEE);
+}
+.news-item {
+  position: relative;
+  margin-top: 20px;
+}
+.news-item a {
+  display: block;
+  padding-left: 130px; 
+}
+.news-item-subject {
+  font-weight: 700;
+}
+.news-item-brief {
+  margin-top: 10px;
+}
+.news-item-thumbnail {
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+.news-item-thumbnail img {
+  box-shadow: 1px 13px 20px 0 #999;
+}
+.news-item-thumbnail figcaption {
+  margin-top: 15px;
+  text-align: center;
+}
+.news-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.news-more.icon-plus::before {
+  color: #337326;
+}
+/* 신규 이벤트 */
+.event-related {
+  padding: 10px;
+  background: #CCC linear-gradient(#CCC, #EEE);
+  border: 1px solid #AAA;
+  border-radius: 5px;
+}
+.event {
+  position: relative;
+  border-bottom: 1px solid #AAA;
+}
+.event-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.event-heading span {
+  color: #ED552F;
+}
+.event p {
+  margin: 10px 0;
+}
+.event-thumbnail {
+  border: 1px solid #AAA;
+  box-shadow: 5px 5px #999;
+}
+.btn-event {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn-event button {
+  overflow: hidden;
+  width: 18px;
+  height: 0;
+  padding-top: 17px;
+  background-color: #FFF;
+  background-image: url("images/back_forward.png");
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+}
+.btn-event .btn-event-next {
+  background-position: -37px 0;
+}
+.related-heading {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.related-heading span {
+  color: #ED552F;
+}
+.related-list {
+  overflow: hidden;
+  height: 33px;
+  margin-top: 10px;
+  background-color: #FFF;
+  border: 1px solid #AAA;
+  border-radius: 3px;
+  transition: height 0.3s ease;
+}
+.related-list.list-act {
+  height: auto;
+  padding: 5px 0;
+}
+.related-list a {
+  display: block;
+  padding: 4px 15px;
+}
 /* 슬로건 */
 .slogan {
   height: 10vh;

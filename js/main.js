@@ -11,6 +11,7 @@ item.on('mouseover focusin', function() {
   $(this).addClass('menu-act');
 });
 
+// 공지사항 및 자료실 게시판 탭 메뉴 제어를 위한 스크립트
 tab.on('click keyup', function(e) {
   e.preventDefault();
   if (e.keyCode === 13 || e.keyCode === 32 || e.type === 'click') {
@@ -26,4 +27,11 @@ $('.board-tab').on('click keyup', function(e) {
     $('.board3').find('.tabpanel-act').removeClass('tabpanel-act');
     $('#' + $(this).attr('aria-controls')).addClass('tabpanel-act');
   }
+});
+
+// 관련 사이트 목록 제어를 위한 스크립트
+$('.related-list').on('mouseover focusin', function() {
+  $(this).addClass('list-act');
+}).on('mouseout focusoust', function() {
+  $(this).removeClass('list-act');
 });
