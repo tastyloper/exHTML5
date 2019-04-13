@@ -32,6 +32,6 @@ $('.board-tab').on('click keyup', function(e) {
 // 관련 사이트 목록 제어를 위한 스크립트
 $('.related-list').on('mouseover focusin', function() {
   $(this).addClass('list-act');
-}).on('mouseout focusoust', function() {
+}).on('mouseout focusout', function() {
   $(this).removeClass('list-act');
 });
