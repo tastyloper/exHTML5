@@ -1,0 +1,70 @@
+@charset "utf-8";
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+
+/* All Device */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  color: #181818;
+  font-family: "Spoqa Han Sans", sans-serif;
+  line-height: 1.15;
+  background: #FFF;
+}
+.header {
+  background: yellow;
+}
+.navigation {
+  background: lime;
+}
+.main-content {
+  background: skyblue;
+}
+.footer {
+  background: pink;
+}
+/* Mobile & tablet Device */
+@media all and (max-width: 999px) {
+  .header, .navigation, .main-content, .footer {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .header {
+    height: 10vh;
+  }
+  .navigation {
+    height: 20vh;
+  }
+  .main-content {
+    height: 60vh;
+  }
+  .footer {
+    height: 10vh;
+  }
+}
+@media all and (min-width: 1000px) {
+  .header {
+    float: right;
+    width: 75%;
+    height: 20vh;
+  }
+  .navigation {
+    float: left;
+    width: 25%;
+    height: 80vh;
+  }
+  .main-content {
+    float: right;
+    width: 75%;
+    height: 60vh;
+  }
+  .footer {
+    width: 100%;
+    height: 20vh;
+    clear: both;
+  }
+}
